@@ -74,7 +74,8 @@ while True:
                     boat["monks"] -= 1
 
         case "b":
-            boat["island"] = not boat["island"]
+            if boat["monks"] + boat["cannibals"] != 0:
+                boat["island"] = not boat["island"]
 
         case _:
             pass
